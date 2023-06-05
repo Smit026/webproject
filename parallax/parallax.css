@@ -4,11 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 100%;
+}
 #wrapper{
     height: 100vh;
     overflow-x: hidden;
    
-    perspective: 10px;
+    perspective: 0.625rem;
 }
 
  .nav{
@@ -16,6 +19,7 @@
     top:0.5rem;
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     
 } 
@@ -24,7 +28,7 @@
     color:white;
     text-decoration:none;
     font-size: 1.25rem;
-    text-shadow: 1px 1px rgb(126, 112, 112);
+    text-shadow: 0.062rem 0.062rem rgb(126, 112, 112);
 }
 .nav-detail:hover{
     transform: scale(1.2);
@@ -50,13 +54,13 @@
    top:100%;
 
    font-size:5rem;
-    letter-spacing:4px;
+    letter-spacing:0.25rem;
     color:white;
-    text-shadow: 5px 5px black;
+    text-shadow: 0.31rem 0.31rem black;
 
     z-index: -1;
     object-fit: cover;
-    transform: translateZ(-9px) scale(2);
+    transform: translateZ(-0.56rem) scale(2);
    
    
 }
@@ -68,7 +72,7 @@
 
     object-fit: cover;
     z-index: -1;
-    transform: translateZ(-50px) scale(6.1);
+    transform: translateZ(-3.125rem) scale(6.1);
 }
 
 
@@ -79,14 +83,14 @@
     border-radius: 2rem;
     height: 17.5rem;
     width: 18rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
 }
 
 .sec{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 4rem 18rem  ;
-    gap: 15px;
+    gap: 1rem;
     background-color: white;
     padding: 1rem;
    
@@ -100,10 +104,11 @@
 .details{
     grid-column-start: 1;
     grid-column-end: 3;
+    font-size:1rem;
 }
 .sec .head{
     font-size:2.5rem;
-    letter-spacing:3px;
+    letter-spacing:0.1875rem;
     color:black;
     background-color: white;
 }
@@ -144,7 +149,7 @@
 
 .card{
     position: relative;
-    border: 2px solid white;
+    border: 0.125rem solid white;
     height: 15rem;
     width: 25rem;
     overflow: hidden;
@@ -171,9 +176,9 @@
 .head1{
     margin-top: 2rem;
     font-size:3rem;
-    letter-spacing:3px;
+    letter-spacing:  0.1875rem;
     color:black;
-    border-bottom: 2px solid rgba(7, 5, 5, 0.26);
+    border-bottom: 0.125rem solid rgba(7, 5, 5, 0.26);
     
 }
 .contact{
@@ -186,7 +191,7 @@
     background-color: #e8e8e8;
 }
 .form{
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,6 +202,7 @@
     height: 2rem;
     border-radius: 0.25rem;
     letter-spacing: 0.5rem;
+    font-size: 1rem;
 }
 .submit{
     width: 15rem;
@@ -219,7 +225,7 @@
 .pic{
     width: 32%;
     position: relative;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     overflow: hidden;
 }
 .pic .tompic{
@@ -227,13 +233,40 @@
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%);
-    box-shadow: 0 0 20px #333;
+    box-shadow: 0 0 1.25rem #333;
 }
 .pic:hover{
     transform: scale(1.03);
-    filter: drop-shadow(0 0 10px #333);
+    filter: drop-shadow(0 0 0.625rem #333);
     transition: 0.3s;
 }
 .pic:hover .tompic{
     filter: grayscale(0%);
+}
+
+
+@media(max-width:1200px){
+    html{
+        font-size: 65%;
+    }
+}
+@media(max-width:992px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+}
+@media(max-width:600px){
+    html{
+        font-size: 35%;
+    }
+}
+@media(max-width:400px){
+    html{
+        font-size: 25%;
+    }
 }
